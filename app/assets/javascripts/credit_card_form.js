@@ -6,9 +6,9 @@ $(document).ready(function() {
  	$form_find("input[type=submit]").prop("disabled", true);
 
  	//If Stripe was initiliazed correctly this will create a token using the credentials
- 	if(Stripe)[
+ 	if(Stripe){
  		Stripe.card.createToken($form, stripeResponseHandler);
- } else {
+ 	} else {
  	show_error("Failed to load credit card processing functionality. Please reload this page in your browser.")
  }
  return false;
